@@ -1,7 +1,7 @@
 .bug {
 	border-radius: 5px;
-	border: 2px solid red;
-	background-color: red;
+	border: 2px solid #006400;
+	background-color: #32CD32;
 	height:30px;
 	width: 85px;
 	text-align: center;
