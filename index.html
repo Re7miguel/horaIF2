@@ -8,8 +8,8 @@ layout: default
 	</center>
 	<center>
 		<div class="dropdown">
-		<button onclick="myFunction('myDropdown')" class="dropbtn">Professores</button>
-		  <div id="myDropdown" class="dropdown-content">
+		<button onclick="myFunction('myDropdownProfessor')" class="dropbtn">Professores</button>
+		  <div id="myDropdownProfessor" class="dropdown-content">
 		    <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
 		    {% for profz in site.data.hprofessor.professores %}
 			  <p onclick="Botao('{{profz}}')">{{profz}} </p>
@@ -17,8 +17,8 @@ layout: default
 		  </div>
 		</div>
 		<div class="dropdown">
-		<button onclick="myFunction('myDropdown2')" class="dropbtn">Turmas</button>
-		  <div id="myDropdown2" class="dropdown-content">
+		<button onclick="myFunction('myDropdownTurma')" class="dropbtn">Turmas</button>
+		  <div id="myDropdownTurma" class="dropdown-content">
 		    	<input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction2()">
 			  {% for turmaz in site.data.hturma.turmas %}
 			  	<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
