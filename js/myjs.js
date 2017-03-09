@@ -1,5 +1,5 @@
 function myFunction(n) {
-    if(document.getElementById(n).style.display == "none")
+    if(document.getElementById(n).style.display == "none"){
             document.getElementById(n).style.display="block";
     }else{
             document.getElementById(n).style.display="none";
