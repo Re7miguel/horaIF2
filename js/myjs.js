@@ -1,17 +1,17 @@
 function myFunction(n) {
-    if(document.getElementById(n).style.display == "none")
-        document.getElementById(n).style.display="block";
-        if(n == 'myDropdownProfessor'){
+    if(n == 'myDropdownProfessor'){
             if(document.getElementById('myDropdownTurma').style.display == "block"){
                     document.getElementById('myDropdownTurma').style.display = "none";
             }
-        }else{
+    }else{
             if(document.getElementById('myDropdownProfessor').style.display == "block"){
                     document.getElementById('myDropdownProfessor').style.display = "none";
             }
-        }
+    }
+    if(document.getElementById(n).style.display == "none")
+            document.getElementById(n).style.display="block";
     }else{
-        document.getElementById(n).style.display="block";
+            document.getElementById(n).style.display="block";
     }
 }
 
