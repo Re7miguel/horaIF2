@@ -1,4 +1,6 @@
 body{
+	background-attachment: fixed;
+	background-repeat: no-repeat; 
 	background-image: url("https://www.ifpb.edu.br/noticias/2017/01/certificacao-do-ensino-medio-e-declaracao-de-proficiencia-com-base-no-enem/instituto-federal-paraiba.jpg/@@images/6a0caa62-761b-4308-87a6-05a8f8f1b512.jpeg");
 }
 .bug {
@@ -37,7 +39,7 @@ text-align: center;
 }
 
 .dropbtn {
-    background-color: #0000;
+    background-color: #660000;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -47,7 +49,7 @@ text-align: center;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #66FF66;
+    background-color: #900;
 }
 #myInput {
     border-box: box-sizing;
