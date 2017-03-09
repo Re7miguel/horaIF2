@@ -3,22 +3,24 @@ layout: default
 ---
 
 <div style="width:30%;float:left;">
-	<center style="width:100%">
-		<img src="img/ifpb.png">
+	<center>
+		<img src="img/ifpb.png" style="width:100%">
 	</center>
 	<center>
 		<div class="dropdown">
 		<button onclick="myFunction('myDropdownProfessor')" class="dropbtn">Professores</button>
-		  <div id="myDropdownProfessor" class="dropdown-content">
+		  <div id="myDropdownProfessor" class="dropdown-content" style="display:none">
 		    <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction('myInput','myDropdownProfessor')">
-		    {% for profz in site.data.hprofessor.professores %}
-			  <p onclick="Botao('{{profz}}')">{{profz}} </p>
+			<div style="height:350px">
+		    	{% for profz in site.data.hprofessor.professores %}
+				<p onclick="Botao('{{profz}}')">{{profz}} </p>
 			{% endfor %}
+			</div>
 		  </div>
 		</div>
-		<div class="dropdown">
+		<div class="dropdown" style="margin-top:2px">
 		<button onclick="myFunction('myDropdownTurma')" class="dropbtn">Turmas</button>
-		  <div id="myDropdownTurma" class="dropdown-content">
+		  <div id="myDropdownTurma" class="dropdown-content" style="display:none">
 		    	<input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction('myInput2','myDropdownTurma')">
 			  {% for turmaz in site.data.hturma.turmas %}
 			  	<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
@@ -45,10 +47,10 @@ layout: default
 				<td>{{ linha.horario }}</td>
 				{% for aula in linha.aulas %}
 					{% if aula.disciplina == "ALMOÇO" or aula.disciplina == "JANTAR" or aula.disciplina == "INTERVALO" %}
-						<td colspan="5"><b>{{ aula.disciplina }}</b></td>
+						<td colspan="5" style="font-size:15px">{{ aula.disciplina }}</td>
 						{% break %}
 					{% else %}
-						<td><b>{{ aula.disciplina }}<br>{{aula.professor}}</b></td>
+						<td style="font-size:15px">{{ aula.disciplina }}<br>{{aula.professor}}</td>
 					{% endif %}
 				{% endfor %}
 				</tr>
@@ -76,10 +78,10 @@ layout: default
 				<td>{{ linha.horario }}</td>
 				{% for aula in linha.aulas %}
 					{% if aula.disciplina == "ALMOÇO" or aula.disciplina == "JANTAR" or aula.disciplina == "INTERVALO" %}
-						<td colspan="5"><b>{{ aula.disciplina }}</b></td>
+						<td colspan="5" style="font-size:15px">{{ aula.disciplina }}</td>
 						{% break %}
 					{% else %}
-						<td><b>{{ aula.disciplina }}<br>{{aula.turma}}</b></td>
+						<td style="font-size:15px">{{ aula.disciplina }}<br>{{aula.turma}}</td>
 					{% endif %}
 				{% endfor %}
 				</tr>
