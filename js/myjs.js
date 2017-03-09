@@ -25,5 +25,9 @@ function Botao(n) {
     document.getElementById(n).style.display = "block";
 }
 function myFunction(n) {
-    
+    if(document.getElementById(n).style.display == "block"){
+        document.getElementById(n).style.display = "none";
+    }else{
+        document.getElementById(n).style.display = "block";   
+    }
 }
