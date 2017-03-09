@@ -4,11 +4,11 @@ function myFunction(n) {
     document.getElementById(n).style.display="block";
 }
 
-function filterFunction() {
-    var input, filter, ul, li, p, i;
-    input = document.getElementById("myInput");
+function filterFunction(n,m) {
+    var input, filter, p, i;
+    input = document.getElementById(n);
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
+    div = document.getElementById(m);
     p = div.getElementsByTagName("p");
     for (i = 0; i < p.length; i++) {
         if (p[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -29,19 +29,4 @@ function Botao(n) {
     }
   }
     document.getElementById(n).style.display = "block";
-}
-
-function filterFunction2() {
-    var input, filter, ul, li, p, i;
-    input = document.getElementById("myInput2");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown2");
-    p = div.getElementsByTagName("p");
-    for (i = 0; i < p.length; i++) {
-        if (p[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            p[i].style.display = "";
-        } else {
-            p[i].style.display = "none";
-        }
-    }
 }
