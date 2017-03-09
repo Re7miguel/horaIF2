@@ -17,7 +17,7 @@ function filterFunction() {
     }
 }
 
-function Botao(professor) {
+function Botao(n) {
   var classes = document.getElementsByClassName("renan");
   var i, davez;
   for (i = 0; i < classes.length; i++){
@@ -26,7 +26,7 @@ function Botao(professor) {
       document.getElementById(davez.id).style.display = "none";
     }
   }
-    document.getElementById(professor).style.display = "block";
+    document.getElementById(n).style.display = "block";
 }
 
 function myFunction2() {
@@ -46,16 +46,4 @@ function filterFunction2() {
             p[i].style.display = "none";
         }
     }
-}
-
-function Botao2(turma) {
-  var classes = document.getElementsByClassName("renan");
-  var i, davez;
-  for (i = 0; i < classes.length; i++){
-    davez = classes[i];
-    if (davez.style.display != "none"){
-      document.getElementById(davez.id).style.display = "none";
-    }
-  }
-    document.getElementById(turma).style.display = "block";
 }
