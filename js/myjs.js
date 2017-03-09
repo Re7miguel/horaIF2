@@ -1,13 +1,4 @@
 function myFunction(n) {
-    if(n == 'myDropdownProfessor'){
-            if(document.getElementById('myDropdownTurma').style.display == "block"){
-                    document.getElementById('myDropdownTurma').style.display = "none";
-            }
-    }else{
-            if(document.getElementById('myDropdownProfessor').style.display == "block"){
-                    document.getElementById('myDropdownProfessor').style.display = "none";
-            }
-    }
     if(document.getElementById(n).style.display == "none")
             document.getElementById(n).style.display="block";
     }else{
