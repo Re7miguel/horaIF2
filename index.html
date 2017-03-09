@@ -18,7 +18,7 @@ layout: default
     <input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction2()">
     {% for cursoz in site.data.horario.cursos %}
 	  {% for turmaz in cursoz.turmas %}
-	  <p onclick="Botao2('{{turmaz.nome}}')">{{turmaz.nome}} </p>
+	  <p onclick="Botao2('{{turmaz.nome | remove: " "}}')">{{turmaz.nome}} </p>
 	  {% endfor %}
 	{% endfor %}
   </div>
