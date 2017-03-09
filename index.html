@@ -41,6 +41,13 @@ layout: default
 	      </tr>
         
         {% for linha in turma.linhas %}
+	      {% if if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR"
+	      or linha.aulas[0].disciplina == "INTERVALO" %}
+	      <tr>
+		<td><b>{{ linha.horario }}</b></td>	
+		<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td>
+		</tr>
+	      {% else %}
           <tr>
           <td>{{linha.horario}}</td>
           {% for aula in linha.aulas %}
@@ -51,6 +58,7 @@ layout: default
 		  {% endif %}     
           {% endfor %}
           </tr>
+	      {% endif %}
        {% endfor %}
        </table>
 	</div>
