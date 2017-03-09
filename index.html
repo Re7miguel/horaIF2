@@ -44,7 +44,7 @@ layout: default
 	      {% if if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR"
 	      or linha.aulas[0].disciplina == "INTERVALO" %}
 	      <tr>
-		<td><b>{{ linha.horario }}</b></td>	
+		<td>{{ linha.horario }}</td>	
 		<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td>
 		</tr>
 	      {% else %}
