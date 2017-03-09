@@ -29,7 +29,7 @@ layout: default
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
     {% for turma in curso.turmas %}
-	<div id="{{turma.nome}}{{prof}}" class="renan2" style="display: none">
+	<div id="{{turma.nome}}{{prof}}" class="renan2 {{turma.nome | remove: " "}}" style="display: none">
 	<h2><center> {{curso.nome}} </center></h2>
       <h3><center>{{turma.nome}}<center></h3>
       <div class="container">
