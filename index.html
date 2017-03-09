@@ -11,13 +11,26 @@ layout: default
 	  <p onclick="Botao('{{profz}}')">{{profz}} </p>
 	{% endfor %}
   </div>
-</div>	
+</div>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Professores</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction()">
+    {% for cursoz in site.data.horario.cursos %}
+	  {% for turmaz in curso.turmas %}
+	  <p onclick="Botao2('{{turmaz.nome}}')">{{turmaz.nome}} </p>
+	  {% endfor %}
+	{% endfor %}
+  </div>
+</div>
+
 {% for prof in site.data.hprofessor.professores %}
 	<div id="{{prof}}" class="renan" style="display: none">
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
     <h2><center> {{curso.nome}} </center></h2>
     {% for turma in curso.turmas %}
+	<div id="{{turma.nome}}" class="renan2" style="display: none">
       <h3><center>{{turma.nome}}<center></h3>
       <div class="container">
       <table class="table table-striped">
@@ -41,6 +54,7 @@ layout: default
        {% endfor %}
        </table>
 	</div>
+	 </div>
     {% endfor %}
   {% endfor %}
 </div>
