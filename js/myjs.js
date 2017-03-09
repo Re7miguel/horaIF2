@@ -57,5 +57,9 @@ function Botao2(turma) {
       document.getElementById(davez.id).style.display = "none";
     }
   }
-    document.getElementById(turma).style.display = "block";
+classes = document.getElementsByClassName(turma);
+for (i = 0; i < classes.length; i++){
+    davez = classes[i];
+    document.getElementById(davez.id).style.display = "block";
+}  
 }
