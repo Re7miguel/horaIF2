@@ -2,18 +2,16 @@
 layout: default
 ---
 
-	<div class="bug" style="display:none">
-		<div class="dropdown">
-		<button onclick="myFunction()" class="dropbtn">Professores</button>
-		  <div id="myDropdown" class="dropdown-content">
-		    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-		    {% for profz in site.data.hprofessor.professores %}
-			  <p onclick="Botao('{{profz}}')">{{profz}} </p>
-			  {% endfor %}
-		  </div>
-		</div>
-	</div>
-	
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Professores</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    {% for profz in site.data.hprofessor.professores %}
+	  <p onclick="Botao('{{profz}}')">{{profz}} </p>
+	  {% endfor %}
+  </div>
+</div>	
 {% for prof in site.data.hprofessor.professores %}
 	<div id="{{prof}}" class="dany" style="display: none">
 	<h1>{{prof}}</h1>
@@ -48,7 +46,6 @@ layout: default
 </div>
 {% endfor %}
 
-</body>
 
 
 
