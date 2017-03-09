@@ -1,7 +1,18 @@
 function myFunction(n) {
-    document.getElementById('myDropdownProfessor').style.display="none";
-    document.getElementById('myDropdownTurma').style.display="none";
-    document.getElementById(n).style.display="block";
+    if(document.getElementById(n).style.display == "none")
+        document.getElementById(n).style.display="block";
+        if(n == 'myDropdownProfessor'){
+            if(document.getElementById('myDropdownTurma').style.display == "block"){
+                    document.getElementById('myDropdownTurma').style.display = "none";
+            }
+        }else{
+            if(document.getElementById('myDropdownProfessor').style.display == "block"){
+                    document.getElementById('myDropdownProfessor').style.display = "none";
+            }
+        }
+    }else{
+        document.getElementById(n).style.display="block";
+    }
 }
 
 function filterFunction(n,m) {
