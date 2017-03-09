@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div style="width:49.999%;float:left;">
+<div style="width:30%;float:left;">
 	<center>
 		<div class="dropdown">
 		<button onclick="myFunction()" class="dropbtn">Professores</button>
@@ -29,7 +29,7 @@ layout: default
 </div>
 {% for curso in site.data.horario.cursos %}
     {% for turma in curso.turmas %}
-	<div id="{{turma.nome}}" class="renan" style="display: none;float:right;">
+	<div id="{{turma.nome}}" class="renan" style="display: none;float:right;width:69.999%">
 		<center>
 			<h2>{{turma.nome}}</h2>
 		</center>
@@ -60,7 +60,7 @@ layout: default
   {% endfor %}
 
 {% for professor in site.data.horario.professores %}
-	<div id="{{professor.nome}}" class="renan" style="display: none;float:right;">
+	<div id="{{professor.nome}}" class="renan" style="display: none;float:right;width:69.999%">
 		<center>
 			<h2>{{professor.nome}}</h2>
 		</center>
