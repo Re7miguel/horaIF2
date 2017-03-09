@@ -18,7 +18,7 @@ layout: default
 		  <div id="myDropdown2" class="dropdown-content">
 		    	<input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction2()">
 			  {% for turmaz in site.data.hturma.turmas %}
-			  	<p onclick="Botao2('{{turmaz}}')">{{turmaz}} </p>
+			  	<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
 			  {% endfor %}
 		  </div>
 		</div>
@@ -31,7 +31,7 @@ layout: default
     {% for turma in curso.turmas %}
 	<div id="{{turma.nome}}" class="renan" style="display: none;float:right;">
 		<center>
-			<h3>{{turma.nome}}</h3>
+			<h2>{{turma.nome}}</h2>
 		</center>
 		<div class="container">
 			<table class="table table-striped">
@@ -57,6 +57,36 @@ layout: default
 		</div>
 	</div>
     {% endfor %}
+  {% endfor %}
+
+{% for professor in site.data.horario.professores %}
+	<div id="{{professor.nome}}" class="renan" style="display: none;float:right;">
+		<center>
+			<h2>{{professor.nome}}</h2>
+		</center>
+		<div class="container">
+			<table class="table table-striped">
+			<tr>
+			{% for coluna in professor.colunas %}
+				<th>{{coluna}}</th>
+			{% endfor %}
+			 </tr>
+			{% for linha in professor.linhas %}
+				<tr>
+				<td>{{ linha.horario }}</td>
+				{% for aula in linha.aulas %}
+					{% if aula.disciplina == "ALMOÇO" or aula.disciplina == "JANTAR" or aula.disciplina == "INTERVALO" %}
+						<td colspan="5"><b>{{ aula.disciplina }}</b></td>
+						{% break %}
+					{% else %}
+						<td><b>{{ aula.disciplina }}<br>{{aula.turma}}</b></td>
+					{% endif %}
+				{% endfor %}
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+	</div>
   {% endfor %}
 
 
