@@ -27,39 +27,37 @@ layout: default
 		<img src="img/ifpb.png">
 	</center>
 </div>
-<div style="width:49.999%;float:right;">
-	{% for curso in site.data.horario.cursos %}
-	    {% for turma in curso.turmas %}
-		<div id="{{turma.nome}}" class="renan" style="display: none">
-	      		<center>
-		      		<h3>{{turma.nome}}</h3>
-	      		</center>
-			<div class="container">
-				<table class="table table-striped">
+{% for curso in site.data.horario.cursos %}
+    {% for turma in curso.turmas %}
+	<div id="{{turma.nome}}" class="renan" style="display: none;float:right;">
+		<center>
+			<h3>{{turma.nome}}</h3>
+		</center>
+		<div class="container">
+			<table class="table table-striped">
+			<tr>
+			{% for coluna in turma.colunas %}
+				<th>{{coluna}}</th>
+			{% endfor %}
+			 </tr>
+			{% for linha in turma.linhas %}
 				<tr>
-				{% for coluna in turma.colunas %}
-					<th>{{coluna}}</th>
+				<td>{{ linha.horario }}</td>
+				{% for aula in linha.aulas %}
+					{% if aula.disciplina == "ALMOÇO" or aula.disciplina == "JANTAR" or aula.disciplina == "INTERVALO" %}
+						<td colspan="5"><b>{{ aula.disciplina }}</b></td>
+						{% break %}
+					{% else %}
+						<td><b>{{ aula.disciplina }}<br>{{aula.professor}}</b></td>
+					{% endif %}
 				{% endfor %}
-				 </tr>
-				{% for linha in turma.linhas %}
-					<tr>
-					<td>{{ linha.horario }}</td>
-					{% for aula in linha.aulas %}
-						{% if aula.disciplina == "ALMOÇO" or aula.disciplina == "JANTAR" or aula.disciplina == "INTERVALO" %}
-							<td colspan="5"><b>{{ aula.disciplina }}</b></td>
-							{% break %}
-						{% else %}
-							<td><b>{{ aula.disciplina }}<br>{{aula.professor}}</b></td>
-						{% endif %}
-					{% endfor %}
-					</tr>
-				{% endfor %}
-				</table>
-			</div>
-	     	</div>
-	    {% endfor %}
-	  {% endfor %}
-</div>
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+	</div>
+    {% endfor %}
+  {% endfor %}
 
 
 
