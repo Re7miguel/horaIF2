@@ -9,11 +9,11 @@ layout: default
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
     {% for profz in site.data.hprofessor.professores %}
 	  <p onclick="Botao('{{profz}}')">{{profz}} </p>
-	  {% endfor %}
+	{% endfor %}
   </div>
 </div>	
 {% for prof in site.data.hprofessor.professores %}
-	<div id="{{prof}}" class="dany" style="display: none">
+	<div id="{{prof}}" class="renan" style="display: none">
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
     <h2><center> {{curso.nome}} </center></h2>
