@@ -28,9 +28,9 @@ layout: default
 	<div id="{{prof}}" class="renan" style="display: none">
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
-    <h2><center> {{curso.nome}} </center></h2>
     {% for turma in curso.turmas %}
-	<div class="renan2" style="display: none">
+	<div id="{{turma.nome}}{{prof}}" class="renan2" style="display: none">
+	<h2><center> {{curso.nome}} </center></h2>
       <h3><center>{{turma.nome}}<center></h3>
       <div class="container">
       <table class="table table-striped">
