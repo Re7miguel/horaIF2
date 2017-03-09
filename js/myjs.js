@@ -49,7 +49,7 @@ function filterFunction2() {
 }
 
 function Botao2(turma) {
-  var classes = document.getElementsByClassName("renan2");
+  var classes = document.getElementsByClassName("renan");
   var i, davez;
   for (i = 0; i < classes.length; i++){
     davez = classes[i];
@@ -57,9 +57,5 @@ function Botao2(turma) {
       document.getElementById(davez.id).style.display = "none";
     }
   }
-classes = document.getElementsByClassName(turma);
-for (i = 0; i < classes.length; i++){
-    davez = classes[i];
-    document.getElementById(davez.id).style.display = "block";
-}  
+    document.getElementById(turma).style.display = "block";
 }
