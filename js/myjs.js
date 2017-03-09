@@ -1,5 +1,7 @@
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function myFunction(n) {
+    document.getElementById('myDropdownProfessor').style.display="none";
+    document.getElementById('myDropdownTurma').style.display="none";
+    document.getElementById(n).style.display="block";
 }
 
 function filterFunction() {
@@ -27,10 +29,6 @@ function Botao(n) {
     }
   }
     document.getElementById(n).style.display = "block";
-}
-
-function myFunction2() {
-    document.getElementById("myDropdown2").classList.toggle("show");
 }
 
 function filterFunction2() {
