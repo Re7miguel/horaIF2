@@ -17,9 +17,9 @@ layout: default
 		<button onclick="myFunction2()" class="dropbtn">Turmas</button>
 		  <div id="myDropdown2" class="dropdown-content">
 		    <input type="text" placeholder="Search..." id="myInput2" onkeyup="filterFunction2()">
-		    {% for cursoz in site.data.horario.cursos %}
+		    {% for cursoz in site.data.turma.turmas %}
 			  {% for turmaz in cursoz.turmas %}
-			  <p onclick="Botao2('turmaz.nome')">{{turmaz.nome}} </p>
+			  <p onclick="Botao2('{{turmaz}}')">{{turmaz}} </p>
 			  {% endfor %}
 			{% endfor %}
 		  </div>
